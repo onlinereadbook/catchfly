@@ -1,0 +1,27 @@
+{
+  "name": "catchfly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlinereadbook/catchfly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onlinereadbook/catchfly/issues"
+  },
+  "homepage": "https://github.com/onlinereadbook/catchfly#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "chromedriver": "^2.31.0",
+    "mz": "^2.6.0",
+    "request": "^2.81.0",
+    "selenium-webdriver": "^3.5.0"
+  }
+}
