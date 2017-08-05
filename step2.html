@@ -1,0 +1,598 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+    <title>遠通電收</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="shortcut icon" href="/UX/Images/ui/favicon.ico" />
+
+    <link href="/UX/Content/csspure?v=Sg5_smusgb8twti6nwKDsmUh4vQYwM4pApcwKKHn9Wo1" rel="stylesheet" />
+
+    <link href="/UX/Content/cssjquery?v=Zmv4SxDXZjscvzHivTakX5REyycI4Nfd_YQlZp0TV9k1" rel="stylesheet" />
+
+    <link href="/UX/Content/css?v=5j8M3It1ZjT76-9MU6GayzHJUQTouxZ_QfjGlOwMXgk1" rel="stylesheet" />
+
+    <link href="/UX/Content/cssdatatable?v=78BCrrbZ1_zHTbEKl1CLzyJ77yAoOK80eDtyC2nh7wk1" rel="stylesheet" />
+
+    <link href="/UX/Content/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="/UX/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    <script src="/UX/bundles/jquery?v=-9Gy7pwaTlsSvn3XzFc4DGMpm-XNhjGzSQI2OyoRPEY1"></script>
+
+    <script src="/UX/bundles/jqueryui?v=Dzmryy3YgWXXGzF_6_NLbPqvAzUSlQ87LN91l0dBL5g1"></script>
+
+    <script src="/UX/bundles/jquerybxslider?v=SPb9_1916qBiTKOD4maeAKKpZQVwTGvGxnOsUst_TDM1"></script>
+
+
+    <script src="/UX/bundles/jqueryblockui?v=h3aE-DeDtwp69tvJZuW_tbwPZjIBj8vxhy_0A_BF6EQ1"></script>
+
+    <script src="/UX/bundles/jqueryval?v=r2B3MPE98J_IVBcvQH-gmCuzdm5XV6c7JNdixDI5Wys1"></script>
+
+    <script src="/UX/bundles/jqueryplaceholder?v=rbkINxJlN2arbDY7l-qb5mHr4ZMmod1iVPSNveLG2bo1"></script>
+
+    <script src="/UX/bundles/highcharts?v=CR8ThtOSlfMJ8kAPbHjyS8wI5F8_Dmb6Kl0MTwfiQNo1"></script>
+
+    <script src="/UX/bundles/roundedcorners?v=vAWyoFb0AtpkS3f1qevpT8hDAR6skOxTOhYEelyIaf81"></script>
+
+    <script src="/UX/bundles/datatable?v=1ggjYcxEXvDdEokJhyOCefc4NTjQF_gd4r8rPROom6A1"></script>
+
+    <script src="/UX/bundles/jquerybase64?v=t6x64B98xMywunmu8P6PzfNPf3lXiK8SlcWbl_jkqxw1"></script>
+
+    <script src="/UX/bundles/portalcommon?v=Uq_EIGH3o6Ba2v5PA0_N6jvhEjLl5vTIq28_OgthTTE1"></script>
+    
+    <script src="/UX/bundles/jqueryiFrameAutoHeight?v=EwV0sD1w8siXMVCVc7AA-c7WRkGDlHQXDXcmrySNNWo1"></script>
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-75224555-2', 'auto');
+    </script>
+    
+
+    <!--[if lt IE 8]>
+        <script src="/UX/Scripts/json2.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="/UX/Scripts/vendor/html5shiv.min.js"></script>
+      <script src="/UX/Scripts/vendor/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .dialog {
+            background: #fff;
+        }
+        .dialog .dialog-head {
+            padding: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #ededed;
+        }
+        .dialog .dialog-head h2 {
+            font-size: 22px;
+            color: #666;
+            font-weight: bold;
+            text-align: left;
+        }
+        .dialog .dialog-content {
+            width: 86%;
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+        .dialog .dialog-content .note {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        /* fix IE placeholder color */
+        :-ms-input-placeholder {
+            color:    #999;
+        }
+        /* hide IE cross button in input */
+        ::-ms-clear {
+            display: none;
+        }
+        .only-print {
+            display: none !important;
+        }
+        /* IE8 placeholder */
+        .placeholder { color: #aaa; }
+    </style>  
+
+    <script type="text/javascript">
+        var webRoot = '/UX/';
+        var recaptchaType = 'image';
+        if (recaptchaType == 'image') {
+            window.recaptchaLangTexts = {
+                accessibilityAlt: '聲音檔',
+                accessibilityTitle: '輔助功能選項：聽一問一答吧！',
+                accessibilityDescription: '將聽到的數字或文字&lt;strong&gt;答案&lt;/strong&gt;填入下方:',
+                explanation: '請選擇 &lt;strong&gt;ANSWER&lt;/strong&gt;',
+                refreshAlt: '重新產生',
+                refreshTitle: '重新產生'
+            };
+        }
+
+        // 預覽列印的iframe會存取此屬性 (for IE10以下)
+        if (!window.location.origin) {
+            window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+        }
+
+            var webLogPath = undefined;
+
+        if (location.href.indexOf('UX0901SharePoint') == -1 &amp;&amp; location.href.indexOf('UX000007ContactUs') == -1) {
+            if (window.history &amp;&amp; window.history.replaceState) {
+                window.history.replaceState("FETC", '遠通電收', webRoot);
+            }
+        }
+
+        $(document).ready(function () {
+            //Set Content Layout
+            Portal.Common.SetContentLayout();
+        });
+
+        function AjaxPostFun(data, updateTarget) {
+            if (data &amp;&amp; typeof data.isSucceed != 'undefined' &amp;&amp; data.isSucceed === false) {
+                var dlgTitle = data.dlgTitle || '系統訊息';
+
+                //Show Dialog(AuotOpen)                
+                Portal.Common.OpenOkayDialog(dlgTitle, data.errorMessage, null, null, '確定', null);
+
+                $.get('/UX/UX0000Common/UX000000GetAPIException', function(d) {                    
+                    if (d &amp;&amp; d.isSucceed) {
+                        try {
+                            console.log('=== api exception ===');
+                            console.log(d);
+
+                            d.rqObjString = JSON.parse(d.rqObjString);
+                            d.rqObjString.requestString = JSON.parse(d.rqObjString.requestString);
+                            d.decryptReturnString = JSON.parse(d.decryptReturnString);
+
+                            var $content = $('#msgPopUpDiv .dialog-content');
+                            $('pre', $content).remove();
+                            $content.append('&lt;pre&gt;' + JSON.stringify(d, null, 2) + '&lt;/pre&gt;');
+
+                            $('#msgPopUpDiv').dialog('option', 'width', $(window).width() * 0.9);
+                            $('#msgPopUpDiv').dialog('option', 'maxHeight', $(window).height() * 0.9);
+                            $('pre', $content).css('maxHeight', $content.height());
+                            $('#msgPopUpDiv').dialog('option', 'position', { my: "center", at: "center", of: window });
+                        } catch (err) {
+                            console.log(err);
+                        }
+                    }
+                });
+
+                return false;
+            }
+            else {
+                if (typeof updateTarget == 'string' || typeof updateTarget == 'undefined') {
+                    // default target #UXContentPage
+                    updateTarget = updateTarget || 'UXContentPage';
+                    // Trim for IE9
+                    data = Portal.Common.TrimHtmlEmptyString(data);
+                    //Replace the RenderBody()
+                    $(updateTarget.indexOf('.') == 0 ? updateTarget : '#' + updateTarget).html(data);
+
+                    //Set Content Layout
+                    Portal.Common.SetContentLayout();
+                } else if (typeof updateTarget == 'function') {
+                    updateTarget();
+                }
+
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="UXContentPage">
+        
+
+
+<div class="wrap form offical-page offical-page-service offical-page-service-contact-us">
+    <div class="pure-g header header-red"></div>
+    <!--/header-->
+    <div class="pure-g content">
+        <div class="section-wrap">
+            <div class="pure-u-1-4 left-section-wrap">
+                <div class="logo text-center">
+                    <a href="/UX/"><img class="logo-img" src="/UX/Images/ui/logo.png" alt="" /></a>
+                </div>
+                <div class="left-menu offical-page-menu-service"><ul class="main-menu"><li class="no-sub"><a href="/UX/UX0201ServiceLocation/UX020101ServiceLocation"><i class=""></i>服務據點</a></li><li class="no-sub active"><a href="/UX/UX0000Common/UX000007ContactUs"><i class="fa fa-caret-right"></i>聯絡我們</a></li><li class="no-sub"><a href="/UX/UX0901SharePoint/UX090102File"><i class=""></i>下載專區</a></li><li class="no-sub"><a data-pid="FT0201004" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0201004"><i class=""></i>通行費email服務</a></li><li class="no-sub"><a data-pid="FT0201005" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0201005"><i class=""></i>eTag偵測異常服務</a></li><li class="no-sub"><a href="https://css.fetc.net.tw/CP/"><i class=""></i>企業用戶登入</a></li></ul></div>
+            </div><!--/left-section-wrap-->
+            <div class="pure-u-3-4 right-section-wrap">
+                <div class="content-head">
+                    <div class="text-right nav-menu">
+                        
+
+    <a href="/UX/"><i class="fa fa-sign-out"></i>會員帳號登入</a>
+
+<a href="/UX/UX0201ServiceLocation/UX020101ServiceLocation" target="_blank" class="nav-menu-small"><i class="fa fa-map-marker"></i>服務據點</a>
+
+<a href="https://www.fetc.net.tw/en/" target="_blank" class="nav-menu-small lang">English<i class="fa fa-caret-down"></i></a>
+
+
+                    </div>
+                    <div class="pure-g sub-title">
+                        <div class="pure-u-1-2 left"><span class="cate">客服中心/</span><br /><span class="bold brief">聯絡我們</span></div>
+                        <div class="pure-u-1-2 right"><img src="/UX/Images/ui/phone-title.png" class="vertical-middle head-title-table-img" />客服專線 02-77161998</div>
+                    </div>
+                </div>
+                <div class="pure-g content-text">
+
+                    <div class="pure-u-1-1 wording">
+<form action="/UX/UX0000Common/UX000007ContactUs" class="pure-form" data-ajax="true" data-ajax-success="UX000007Callback(data)" id="contactForm" method="post" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="fsXnL0cLRc3HFy2lJbuIK89rg3HXRK450jkU8isrfbtZPwoYSk4C8h8tOCnJOMqkvOW00V7pDtln4w7ZwJQcUimIXAtMpCxYiq0TCfMA3Rs1" />                            <div class="form-content-wrap clearfix">
+                                <div class="form-content">
+                                    <div class="pure-g row">
+                                        <div class="pure-u-1-5 text-right">
+                                            <label class=""><sup>*</sup>姓名</label>
+                                        </div>
+                                        <div class="pure-u-4-5 text-left">
+                                            <input class="input-text input-half" data-val="true" data-val-length="請輸入中文" data-val-length-max="20" data-val-length-min="0" data-val-required="請輸入姓名" id="name" name="name" type="text" value="" />
+                                            <span class="field-validation-valid validate-message validate-error" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-g row">
+                                        <div class="pure-u-1-5 text-right">
+                                            <p class=""><sup>*</sup>行動電話</p>
+                                        </div>
+                                        <div class="pure-u-4-5 text-left">
+                                            <input class="input-text input-half" data-val="true" data-val-regex="行動電話格式錯誤" data-val-regex-pattern="(09)[0-9]{8}" data-val-required="請填入行動電話" id="mobileNo" name="mobileNo" type="text" value="" />
+                                            <span class="field-validation-valid validate-message validate-error" data-valmsg-for="mobileNo" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-g row">
+                                        <div class="pure-u-1-5 text-right">
+                                            <label class="input-text-100"><sup>*</sup>電子信箱</label>
+                                        </div>
+                                        <div class="pure-u-4-5 text-left">
+                                            <input class="input-text input-half" data-val="true" data-val-email="電子信箱格式錯誤" data-val-length="電子信箱長度須為1~50字元" data-val-length-max="50" data-val-length-min="1" data-val-required="請填入電子信箱" id="email" name="email" type="text" value="" />
+                                            <span class="field-validation-valid validate-message validate-error" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                            <p class="brief">提醒您，目前多數免費信箱（Yahoo!、Pchome…）經常擋信，為防止回覆的信件被擋，建議避免使用。</p>
+                                        </div>
+                                    </div>
+                                    <div class="pure-g row">
+                                        <div class="pure-u-1-5 text-right">
+                                            <label class=""><sup>*</sup>問題類別</label>
+                                        </div>
+                                        <div class="pure-u-4-5 text-left">
+                                            <select class="btn-gradient select-half" id="category" name="category"><option value="其他">其他</option>
+<option value="服務據點">服務據點</option>
+<option value="服務費(手續費)">服務費(手續費)</option>
+<option value="資料查詢與異動">資料查詢與異動</option>
+<option value="違規查詢">違規查詢</option>
+<option value="欠費申訴">欠費申訴</option>
+<option value="繳款方式">繳款方式</option>
+<option value="欠費查詢">欠費查詢</option>
+<option value="e通聯名卡(e通卡)">e通聯名卡(e通卡)</option>
+<option value="卡片異動(退卡)">卡片異動(退卡)</option>
+<option value="卡片加值與扣款">卡片加值與扣款</option>
+<option value="卡片使用">卡片使用</option>
+<option value="卡片購買">卡片購買</option>
+<option value="e通機異動(掛失/轉讓/停用)">e通機異動(掛失/轉讓/停用)</option>
+<option value="e通機使用">e通機使用</option>
+<option value="e通機購買與裝機">e通機購買與裝機</option>
+<option value="促銷活動">促銷活動</option>
+</select>
+                                        </div>
+                                    </div>
+                                    <div class="pure-g row">
+                                        <div class="pure-u-1-5 text-right">
+                                            <label class=""><sup>*</sup>事項說明</label>
+                                        </div>
+                                        <div class="pure-u-4-5 text-left">
+                                            <textarea class="input-text" cols="20" data-val="true" data-val-required="請填入您的問題" id="content" name="content" placeholder="若您對產品及服務有任何建議，請與我們聯絡" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="pure-g row">
+                                        <div class="pure-u-1-5 text-right">
+                                            <label class=""><sup>*</sup>圖案識別驗證</label>
+                                        </div>
+                                        <div class="pure-u-3-4 text-left captcha-wrap">
+                                                <div id="captcha" class="visualCaptcha"><input type="hidden" name="validationScope" value="7b69a7b3-4990-482b-9f6c-698098919353" /><div class="visualCaptcha-accessibility-wrapper visualCaptcha-hide"><div class="accessibility-description">將聽到的數字或文字<strong>答案</strong>填入下方:</div><audio preload="preload"><source src="//www.fetc.net.tw/UX/UX0000Common/UX000011CaptchaAudio?NameSpace=&amp;validationScope=7b69a7b3-4990-482b-9f6c-698098919353&amp;r=8j3kntptri" type="audio/ogg" /><source src="//www.fetc.net.tw/UX/UX0000Common/UX000011CaptchaAudio?NameSpace=&amp;validationScope=7b69a7b3-4990-482b-9f6c-698098919353&amp;r=8j3kntptri" type="audio/mpeg" /></audio></div><p class="visualCaptcha-explanation">請選擇 <strong>眼睛</strong></p><div class="visualCaptcha-possibilities"><div class="img"><a href="#"><img src="//www.fetc.net.tw/UX/UX0000Common/UX000010CaptchaImage/0?NameSpace=&amp;retina=1&amp;validationScope=7b69a7b3-4990-482b-9f6c-698098919353&amp;r=8j3kntptri" id="visualCaptcha-img-0" data-index="0" alt="" title="" /></a></div><div class="img"><a href="#"><img src="//www.fetc.net.tw/UX/UX0000Common/UX000010CaptchaImage/1?NameSpace=&amp;retina=1&amp;validationScope=7b69a7b3-4990-482b-9f6c-698098919353&amp;r=8j3kntptri" id="visualCaptcha-img-1" data-index="1" alt="" title="" /></a></div><div class="img"><a href="#"><img src="//www.fetc.net.tw/UX/UX0000Common/UX000010CaptchaImage/2?NameSpace=&amp;retina=1&amp;validationScope=7b69a7b3-4990-482b-9f6c-698098919353&amp;r=8j3kntptri" id="visualCaptcha-img-2" data-index="2" alt="" title="" /></a></div><div class="img"><a href="#"><img src="//www.fetc.net.tw/UX/UX0000Common/UX000010CaptchaImage/3?NameSpace=&amp;retina=1&amp;validationScope=7b69a7b3-4990-482b-9f6c-698098919353&amp;r=8j3kntptri" id="visualCaptcha-img-3" data-index="3" alt="" title="" /></a></div><div class="img"><a href="#"><img src="//www.fetc.net.tw/UX/UX0000Common/UX000010CaptchaImage/4?NameSpace=&amp;retina=1&amp;validationScope=7b69a7b3-4990-482b-9f6c-698098919353&amp;r=8j3kntptri" id="visualCaptcha-img-4" data-index="4" alt="" title="" /></a></div></div><div class="visualCaptcha-button-group"><div class="visualCaptcha-refresh-button"><a href="#"><img src="/UX/Content/captcha/refresh@2x.png" title="重新產生" alt="重新產生" /></a></div><div class="visualCaptcha-accessibility-button"><a href="#"><img src="/UX/Content/captcha/accessibility@2x.png" title="輔助功能選項：聽一問一答吧！" alt="聲音檔" /></a></div></div></div>
+
+                                            <span class="field-validation-valid validate-message validate-error" data-valmsg-for="validateCode" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                  
+                                </div><!--/form-content-->
+                            </div><!--/form-content-wrap-->
+                            <div class="text-center form-bottom-btn">
+                                <div class="btn btn-gradient" id="btncancel">取消</div>
+                                <div class="btn btn-orange" id="btnsubmit">確定</div>
+                            </div>
+</form>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        reloadimg();
+
+        $('#btnsubmit').click(function () {
+            if ($('#contactForm').valid()) {
+                $('#contactForm').submit();
+            };
+        });
+
+        $('#btncancel').click(function () {
+            Portal.Common.SendToServer('/UX/', null, function (data) {
+                AjaxPostFun(data, 'UXContentPage');
+            });
+        });
+    });
+
+    // 圖形驗證碼
+    $(function () {
+        if (recaptchaType == 'text') {
+            return;
+        }
+
+        var el = $('#captcha').visualCaptcha({
+            imgPath: webRoot + 'Content/captcha/',
+            captcha: {
+                numberOfImages: 5, //圖形數量
+                routes: {
+                    start: "/UX/UX0000Common/UX000009CaptchaStart",
+                    image: "/UX/UX0000Common/UX000010CaptchaImage",
+                    audio: "/UX/UX0000Common/UX000011CaptchaAudio"
+                },
+                namespaceFieldName: 'validationScope',
+                namespace: '7b69a7b3-4990-482b-9f6c-698098919353'
+            },
+            language: recaptchaLangTexts, // _Layout.chtml
+            isRetina: true
+        });
+    });
+
+    function reloadimg() {
+        $('img.img-captcha').attr('src', '/UX/UX0000Common/UX000001GetAuthImage?' + Date.now());
+    };
+
+    function UX000007Callback(data) {
+        if (data.isSucceed === true) {
+            Portal.Common.OpenOkayDialog('聯絡我們 ', data.errorMessage, null, null, '確定', null);
+            $("#contactForm")[0].reset();
+        } else {
+            $('.visualCaptcha-refresh-button:visible').trigger('click');
+            Portal.Common.OpenOkayDialog('聯絡我們 ', data.errorMessage, null, null, '確定', null);
+        }
+    }
+
+</script>
+
+
+    </div>
+
+    <!--footer start-->
+    <div class="pure-g footer">
+        <div class="footer-top" style="overflow: hidden">
+    <div class="pure-g section-wrap">
+        
+
+
+
+
+    <div class="pure-u-1-3 footer-top-nav">
+        <div class="footer-top-nav-title">關於遠通</div>
+        <div class="pure-g"><div class="pure-u-1-2"><dl><dd><a data-pid="FT0101000" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0101000">董事長的話</a></dd><dd><a data-pid="FT0102000" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0102000">總經理的話</a></dd></dl>
+<dl><dt>企業資訊</dt><dd><a data-pid="FT0103001" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0103001">經營起源</a></dd><dd><a data-pid="FT0103002" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0103002">經營願景</a></dd><dd><a data-pid="FT0103003" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0103003">企業標語</a></dd><dd><a href="/UX/UX0901SharePoint/UX090103CompanyFinancial">營運財報</a></dd></dl>
+</div><div class="pure-u-1-2"><dl><dt>企業里程</dt><dd><a href="/UX/UX0901SharePoint/UX090104CompanyEvents?EventsType=CompanyNews">遠通新聞</a></dd><dd><a href="/UX/UX0901SharePoint/UX090105Milestone?milestone=Milestone">大事紀要</a></dd><dd><a href="/UX/UX0901SharePoint/UX090106InternationalAndActive?type=InternationalComm">國際交流</a></dd><dd><a href="/UX/UX0901SharePoint/UX090106InternationalAndActive?type=ActiveRecord">活動紀錄</a></dd><dd><a data-pid="FT0105000" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0105000">精英招募</a></dd></dl>
+</div></div>
+    </div>
+    <div class="pure-u-1-6 footer-top-nav">
+        <div class="footer-top-nav-title">產品服務</div>
+        <dl><dd><a data-pid="FT0201000" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0201000">ETC智慧科技</a></dd></dl>
+<dl><dt>產品介紹</dt><dd><a data-pid="FT0202002" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0202002">eTag卡</a></dd><dd><a data-pid="FT0202003" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0202003">銀行自動儲值</a></dd><dd><a data-pid="FT0202001" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0202001">eTag</a></dd><dd><a href="http://fare.fetc.net.tw">通行費試算</a></dd><dd><a href="https://www.fetc.net.tw/ContentFiles_UX/HTMLContent/fare/index.html">通行費表下載</a></dd></dl>
+
+    </div>
+    <div class="pure-u-1-6 footer-top-nav">
+        <div class="footer-top-nav-title">eTag卡優惠</div>
+        <dl><dd><a data-pid="FT0304000" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0304000">在地商家優惠</a></dd><dd><a data-pid="FT0302000" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0302000">行車服務優惠</a></dd><dd><a data-pid="FT0303000" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0303000">飯店住宿優惠</a></dd></dl>
+
+    </div>
+    <div class="pure-u-1-6 footer-top-nav">
+        <div class="footer-top-nav-title">客服中心</div>
+        <dl><dd><a href="/UX/UX0201ServiceLocation/UX020101ServiceLocation">服務據點</a></dd><dd><a href="/UX/UX0000Common/UX000007ContactUs">聯絡我們</a></dd><dd><a href="/UX/UX0901SharePoint/UX090102File">下載專區</a></dd><dd><a data-pid="FT0201004" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0201004">通行費email服務</a></dd><dd><a data-pid="FT0201005" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0201005">eTag偵測異常服務</a></dd><dd><a href="https://css.fetc.net.tw/CP/">企業用戶登入</a></dd></dl>
+
+    </div>
+    <div class="pure-u-1-6 footer-top-nav">
+        <div class="footer-top-nav-title">問題Q&amp;A</div>
+        <dl><dd><a href="/UX/UX0901SharePoint/UX090107FAQ?FAQType=FAQTopic">話題與回應</a></dd><dd><a href="/UX/UX0901SharePoint/UX090107FAQ?FAQType=FAQServices">常見問題</a></dd><dd><a href="/UX/UX0901SharePoint/UX090107FAQ?FAQType=FAQRegistration">申裝異動</a></dd><dd><a href="/UX/UX0901SharePoint/UX090107FAQ?FAQType=FAQPayment">儲值與繳費</a></dd><dd><a href="/UX/UX0901SharePoint/UX090107FAQ?FAQType=FAQSearch">通行交易查詢</a></dd><dd><a href="/UX/UX0901SharePoint/UX090107FAQ?FAQType=FAQProduct">產品相關</a></dd><dd><a href="/UX/UX0901SharePoint/UX090107FAQ?FAQType=FAQPromotion">促銷專案</a></dd><dd><a href="/UX/UX0901SharePoint/UX090107FAQ?FAQType=FAQLaw">行車與法規</a></dd></dl>
+
+    </div>
+    <div class="pure-u-1-1 hide  footer-top-nav">
+        <div class="footer-top-nav-title">eTag服務</div>
+        <div class="pure-g"><div class="pure-u-1-2"><dl><dt>查詢</dt><dd><a data-pid="FT0601001_01" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601001_01">如何APP查詢</a></dd><dd><a data-pid="FT0601001_02" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601001_02">查詢管道</a></dd><dd><a data-pid="FT0601001_03" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601001_03">通行交易明細查詢說明 </a></dd><dd><a data-pid="FT0601001_04" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601001_04">查詢服務說明 </a></dd></dl>
+</div><div class="pure-u-1-2"><dl><dt>儲值</dt><dd><a data-pid="FT0202003" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0202003">銀行自動儲值 </a></dd><dd><a data-pid="FT0601002_02" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601002_02">超商儲值與其他儲值管道 </a></dd><dd><a data-pid="FT0601002_03" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601002_03">eTag用戶簡訊通知服務 </a></dd><dd><a data-pid="FT0601002_04" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601002_04">儲值服務說明 </a></dd></dl>
+</div><div class="pure-u-1-2"><dl><dt>繳費</dt><dd><a data-pid="FT0601003_01" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601003_01">eTag用戶儲值抵欠費 </a></dd><dd><a data-pid="FT0601003_02" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601003_02">繳費管道</a></dd><dd><a data-pid="FT0601003_03" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601003_03">平信、掛號通知服務 </a></dd><dd><a data-pid="FT0601003_04" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601003_04">繳費服務說明</a></dd></dl>
+</div><div class="pure-u-1-2"><dl><dt>異動、申辦</dt><dd><a data-pid="FT0601004_04" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601004_04">eTag卡申辦、提領</a></dd><dd><a data-pid="FT0601004_01" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601004_01">新車申辦</a></dd><dd><a data-pid="FT0601004_02" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601004_02">中古車申辦</a></dd><dd><a data-pid="FT0601004_03" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601004_03">電話異動與其他管道 </a></dd></dl>
+</div><div class="pure-u-1-2"><dl><dt>eTag智慧停車</dt><dd><a data-pid="FT0601005_02" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601005_02">服務說明</a></dd><dd><a href="https://epksa.fetc.net.tw/epkSA/UserAgreement/UserAgreement/UserAgreement">線上簽署「eTag客戶申請使用停車服務約定條款」</a></dd><dd><a data-pid="FT0601005_03" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601005_03">合作停車場查詢</a></dd></dl>
+</div></div>
+    </div>
+    <div class="pure-u-1-6 hide  footer-top-nav">
+        <div class="footer-top-nav-title">最新公告及活動</div>
+        <dl><dd><a href="/UX/UX0901SharePoint/UX090104CompanyEvents?EventsType=Announcement">最新公告</a></dd><dd><a href="/UX/UX0901SharePoint/UX090104CompanyEvents?EventsType=LatestEvent">最新活動</a></dd></dl>
+
+    </div>
+    <div class="pure-u-1-6 hide  footer-top-nav">
+        <div class="footer-top-nav-title">首頁</div>
+        <dl><dd><a data-pid="UX04030105" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=UX04030105">遠通個資保護聲明</a></dd><dd><a data-pid="UX04030103" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=UX04030103">隱私權政策</a></dd><dd><a data-pid="UX04030104" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=UX04030104">免責聲明</a></dd><dd><a data-pid="FT0601000" href="/UX/UX0901SharePoint/UX090101HtmlContent?processId=FT0601000">網站導覽</a></dd></dl>
+
+    </div>
+
+<script>
+    $(function () {
+        // 檢查是否有左方選單區塊
+        if ($('.left-menu:visible').length == 0) {
+            return;
+        }
+
+        // 選單階層連結事件
+        (function bindEvent() {            
+            $(document).on('click', '.main-menu .no-sub', function (e) {
+                // e.preventDefault();
+                $(this).siblings('.no-sub').removeClass('active').find('.fa-caret-right').removeClass('fa fa-caret-right');
+                $(this).toggleClass('active');
+                $(this).find('i').toggleClass('fa fa-caret-right');
+            });
+
+            $(document).on('click', '.sub-menu &gt; li', function (e) {
+                // e.preventDefault();
+                $(this).siblings('li').removeClass('active').find('.fa-caret-right').removeClass('fa fa-caret-right').addClass('fa fa-minus');
+                $(this).find('i').toggleClass('fa-minus fa-caret-right');
+                $(this).closest('.expand-target-sub-menu').show();
+                $(this).parents('.no-sub').removeClass('active').find('i').removeClass('fa-caret-right');
+            });
+
+            $(document).on('click', '.main-menu .expander-menu &gt; a', function (e) {
+                // e.preventDefault();
+                $(this).closest('li').toggleClass('active');
+                $(this).next('.expand-target-sub-menu').toggleClass('sub-active');
+                $(this).find('.fa-angle-down, .fa-angle-up').toggleClass('fa-angle-down fa-angle-up');
+            });            
+        })();        
+
+        // 繪製選單及標題
+        (function renderMenuAndTitle() {
+            var locationName = location.pathname;
+
+            // replace UX090104CompanyEventContent to UX090104CompanyEvents for match footer links
+            if (locationName.indexOf('UX090104CompanyEventContent') &gt;= 0) {
+                locationName = locationName.replace('UX090104CompanyEventContent', 'UX090104CompanyEvents');
+            }
+
+            // get first part query string only
+            var queryStr = $.trim(location.search || '');
+            if (queryStr) {
+                queryStr = queryStr.split('&amp;').splice(0, 1)[0];
+            }
+
+            // 依據瀏覽器網址找出footer的連結 (忽略大小寫)            
+            var findTarget = (locationName + queryStr).toLowerCase();
+            var $curLink = $('div.footer-top a').filter(function () {
+                return $(this).attr('href').toLowerCase() === findTarget;
+            }).first();
+            // 判斷大小寫
+            //var $curLink = $('div.footer-top a[href="' + (locationName + queryStr) + '"]:first');
+
+            var $wrap = $curLink.parentsUntil('.section-wrap').last();
+            var $blocks = $wrap.find('dl').filter(function () { return $(this).children().length &gt; 0 });
+
+            var $html = $('&lt;ul class="main-menu" /&gt;');
+            $blocks.each(function () {
+                var $this = $(this);
+                var isGroup = $this.find('dt').length &gt; 0;
+
+                if (isGroup) {
+                    var $groupLi = $('&lt;li class="expander-menu has-sub" /&gt;');
+                    var $groupTitle = $('&lt;a href="#"&gt;&lt;/a&gt;');
+                    $groupTitle.text($this.find('dt').text());
+                    $groupTitle.append('&lt;i class="fa fa-angle-down"&gt;&lt;/i&gt;');
+                    $groupLi.append($groupTitle);
+                    $groupLi.append('&lt;div class="expand-target-sub-menu"&gt;&lt;ul class="sub-menu" /&gt;&lt;/div&gt;');
+                    var $subMenu = $groupLi.find('.sub-menu');
+
+                    $this.find('dd').each(function () {
+                        var $link = $(this).find('a');
+                        var $linkClone = $link.clone();
+                        var isActive = $link[0] == $curLink[0];
+                        var $li = $('&lt;li /&gt;');
+
+                        if (isActive) {
+                            $li.addClass('active');
+                            $linkClone.prepend('&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt;');
+                        } else {
+                            $linkClone.prepend('&lt;i class="fa fa fa-minus" /&gt;');
+                        }
+
+                        $li.append($linkClone);
+                        $subMenu.append($li);
+                    });
+
+                    $html.append($groupLi);
+                } else {
+                    $this.children().each(function () {
+                        var tagName = this.tagName.toLowerCase();
+                        if (tagName == 'dt') {
+
+                        } else { // dd
+                            var $link = $(this).find('a');
+                            var $linkClone = $link.clone();
+                            var isActive = $link[0] == $curLink[0];
+                            var $li = $('&lt;li class="no-sub" /&gt;');
+
+                            if (isActive) {
+                                $li.addClass('active');
+                                $linkClone.prepend('&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt;');
+                            } else {
+                                $linkClone.prepend('&lt;i class="" /&gt;');
+                            }
+
+                            $li.append($linkClone);
+                            $html.append($li);
+                        }
+                    });
+                }
+            });
+            $('.left-menu').html($html);
+
+            // 打開子階層選單 (如果active link在子選單內)
+            var $active = $('.sub-menu &gt; .active');
+            if ($active.length &gt; 0) {
+                var $group = $active.parent().parent();
+                $group.addClass('sub-active');
+                $group.prev().find('i').removeClass('fa-angle-down').addClass('fa-angle-up');
+                $group.parent().addClass('active');
+            }
+
+            // 頁面標題
+            var $subTitle = $('.sub-title &gt; .left');
+            var $cat = $subTitle.find('.cate');
+            var $title = $subTitle.find('.brief');
+            $cat.text($wrap.find('.footer-top-nav-title').text() + '/');
+            $title.text($curLink.text());
+        })();
+    });
+</script>
+
+
+    </div>
+
+    
+</div><!--/footer-top-->
+
+<div class="footer-bottom">
+    
+
+
+
+    <iframe id="iframe_UXFooter01" data-auto-height="true" src="//www.fetc.net.tw/ContentFiles_UX/HTMLContent/UXFooter01/index.html?t=636375746233249898" class="iframe iframe-html-content" frameborder="0" style="width: 100%; height: 220px;"></iframe>
+    <script>
+        $(function() {
+            setTimeout(function() {
+                try {
+                    $('#iframe_UXFooter01').filter('[data-auto-height=true]').iframeAutoHeight();
+                } catch (err) {
+                    
+                }
+            }, 10);
+        });
+    </script>
+
+
+    
+</div><!--footer-bottom-->
+    </div>
+    <!--footer end-->
+
+
+</body></html>
