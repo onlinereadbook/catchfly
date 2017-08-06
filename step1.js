@@ -57,8 +57,9 @@ Promise.all(result).then(async (body) => {
         driver.executeScript("document.getElementById('mobileNo').setAttribute('value','0900000000')");
         driver.executeScript("document.getElementById('email').setAttribute('value','xxx@xxx.com')");
         driver.executeScript("document.getElementById('category').setAttribute('value','3')");
-        driver.executeScript("document.getElementById('content').value() = 'test'");
-        driver.executeScript(`document.getElementById('visualCaptcha-img-${x}').click()`);
+        //driver.executeScript("document.getElementById('content').sendKeys() = 'test'");
+        driver.findElement(By.id('content')).sendKeys('xxxxx')
+        driver.executeScript(`document.getElementById('visualCaptcha-img-3').click()`);
 
     });
 

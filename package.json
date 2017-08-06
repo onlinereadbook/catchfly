@@ -24,6 +24,7 @@
     "mz": "^2.6.0",
     "node-command-line": "^1.0.2",
     "request": "^2.81.0",
+    "selenium-html-js-converter": "^0.4.9",
     "selenium-webdriver": "^3.5.0"
   }
 }
